@@ -13,7 +13,7 @@ namespace FlightTickets.PaymentAPI.Services
         {
             try
             {
-                var factory = new ConnectionFactory { HostName = "localhost" };
+                var factory = new ConnectionFactory { HostName = "localhost" }; 
                 using var connection = await factory.CreateConnectionAsync();
                 using var channel = await connection.CreateChannelAsync();
 
