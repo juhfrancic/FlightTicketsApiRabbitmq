@@ -21,7 +21,7 @@ namespace FlightTickets.OrderAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateTicket([FromBody] TicketRequestDTO ticket)
         {
-            _logger.LogInformation("create a new ticket");
+            _logger.LogInformation("Create a new ticket");
             var createdTicket = await _ticketService.CreateTicketAsync(ticket);
             return Ok(createdTicket);
         }
